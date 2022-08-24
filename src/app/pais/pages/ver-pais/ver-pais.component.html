@@ -1,1 +1,42 @@
-<p>ver-pais works!</p>
+<div>
+    <h2>{{pais.name}}</h2>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-3">
+        <img [src]="pais.flags.svg" alt="pais.name" class="large-flag">
+    </div>
+    <div class="col-3">
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <td> Region: </td>
+                    <td>{{pais.subregion}}</td>
+                </tr>
+                <tr>
+                    <td>Capital: </td>
+                    <td>{{pais.capital}}</td>
+                </tr>
+                <tr>
+                    <td>Poblacion:</td>
+                    <td>{{pais.population | number}}</td>
+                </tr>
+                <tr>
+                    <td>Moneda:</td>
+                    <td>{{pais.currencies}}</td>
+                </tr>
+                <tr>
+                    <td>Idioma:</td>
+                    <td>{{pais.languages}}</td>
+                </tr>
+                <tr>
+                    <td>Alianzas:</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,1 +1,32 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr>
+
+<!-- Cuadro de busqueda -->
+<div class="row">
+    <div class="col">
+        <app-barra-busqueda
+        (termino-hijo)="buscar( $event)" 
+        placeholder = "Buscar por Capital..."
+        ></app-barra-busqueda>
+    </div>
+   
+</div>
+<hr>
+
+<!-- Mensaje de Error -->
+<div class="row">
+    <div    class="col" *ngIf="hayError"
+            class="alert alert-danger">
+        No se econtro nada con el término {{terminoBusqueda}}
+    </div>
+
+</div>
+
+<!-- Resultados de busqueda -->
+<div class="row" *ngIf="paises.length>0">
+    <div class="col">
+        <app-tabla [paises-hijo]="paises" ></app-tabla>
+    </div>
+
+</div>
+

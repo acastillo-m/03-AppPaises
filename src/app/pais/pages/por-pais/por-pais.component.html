@@ -4,13 +4,11 @@
 <!-- Cuadro de busqueda -->
 <div class="row">
     <div class="col">
-        <form autocomplete="off" (ngSubmit)="buscar()">
-            <input  type="text"
-                    [(ngModel)]="terminoBusqueda"
-                    name="terminoBusqueda"
-                    placeholder="Buscar país"
-                    class="form-control">
-        </form>
+        <app-barra-busqueda 
+            (termino-hijo)="buscar( $event)"
+            (onDebounce)="sugerencias($event)"
+            placeholder = "Buscar por Pais..."
+            ></app-barra-busqueda>
     </div>
 </div>
 
@@ -22,36 +20,14 @@
     No se econtro nada con el término {{terminoBusqueda}}
 </div>
 
+
 <!-- Resultados de busqueda -->
-<div *ngIf="!hayError" class="row">
+<div *ngIf="paises.length>0" class="row">
     <div class="col">
-
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Bander</th>
-                    <th>Nombre</th>
-                    <th>Población</th>
-                    <th></th>
-
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>bandera</td>
-                    <td>abc</td>
-                    <td>1456798</td>
-                    <td>
-                        <a href="/pais/cri">Ver mas ...</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
+        <app-tabla [paises-hijo]="paises"></app-tabla>
     </div>
 </div>
+
 
 
 
