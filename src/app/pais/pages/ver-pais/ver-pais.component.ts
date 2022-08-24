@@ -4,7 +4,7 @@ import { switchMap, tap } from 'rxjs/operators';
 
 
 import { PaisAppiService } from '../../services/pais-appi.service';
-import { Country, Language } from '../../interfaces/pais.interface';
+import { Country } from '../../interfaces/pais.interface';
 
 
 @Component({
@@ -42,8 +42,7 @@ export class VerPaisComponent implements OnInit {
       .pipe(
         switchMap((param)=>
           this.paisService.getPais(param['idPais'])
-        ),
-        tap(console.log)
+        )
       )
       .subscribe({
         next: ((pais:Country)=>{

@@ -1,17 +1,19 @@
-<h2>Por Capital</h2>
-<hr>
-
-<!-- Cuadro de busqueda -->
-<div class="row">
-    <div class="col">
-        <app-barra-busqueda
-        (termino-hijo)="buscar( $event)" 
-        placeholder = "Buscar por Capital..."
-        ></app-barra-busqueda>
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Por Capital</h2>
+    <hr>
+    
+    <!-- Cuadro de busqueda -->
+    <div class="row">
+        <div class="col">
+            <app-barra-busqueda
+            (termino-hijo)="buscar( $event)"
+            placeholder = "Buscar por Capital..."
+            ></app-barra-busqueda>
+        </div>
+    
     </div>
-   
+    <hr>
 </div>
-<hr>
 
 <!-- Mensaje de Error -->
 <div class="row">

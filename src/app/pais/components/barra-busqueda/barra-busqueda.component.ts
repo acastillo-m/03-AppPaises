@@ -41,7 +41,7 @@ export class BarraBusquedaComponent implements OnInit{
 
   emitir(){
     this.onEnter.emit(this.terminoBusqueda);
-    console.log(this.terminoBusqueda);
+    console.log('emitir',this.terminoBusqueda);
     
   }
 

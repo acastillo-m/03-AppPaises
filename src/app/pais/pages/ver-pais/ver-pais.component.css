@@ -1,0 +1,33 @@
+img {
+    display: block;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    width: 100%;
+    border: 5px solid black;
+  }
+
+div{
+    margin-bottom:1vh;
+}
+.center {
+    text-align: center;
+    display: block;
+}
+
+.independiente{
+    background-color: green;
+    border: 3px solid green;
+    color:white;
+}
+
+.dependiente{
+    background-color: red;
+    border: 3px solid red;
+    color:white;
+}
+
+/* h4{
+    color: white;
+} */
